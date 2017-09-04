@@ -1,0 +1,1576 @@
+{
+  "contract_name": "Fundraiser",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "endBlock",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "weiPerBtc",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "defaultEtmPerBtc",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isActive",
+      "outputs": [
+        {
+          "name": "active",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalETM",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "kill",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "records",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newRate",
+          "type": "uint256"
+        }
+      ],
+      "name": "adjustRate",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "numDonations",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "halt",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "treasury",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalWei",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_donor",
+          "type": "address"
+        },
+        {
+          "name": "_returnAddress",
+          "type": "address"
+        },
+        {
+          "name": "checksum",
+          "type": "bytes4"
+        },
+        {
+          "name": "coupon",
+          "type": "bytes32"
+        }
+      ],
+      "name": "donate",
+      "outputs": [],
+      "payable": true,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "beginBlock",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "coupon",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getRate",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isHalted",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "unhalt",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "coupon",
+          "type": "bytes32"
+        },
+        {
+          "name": "etmPerBTC",
+          "type": "uint256"
+        }
+      ],
+      "name": "addCoupon",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "coupon",
+          "type": "bytes32"
+        }
+      ],
+      "name": "deleteCoupon",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "admin",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "dust",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_admin",
+          "type": "address"
+        },
+        {
+          "name": "_treasury",
+          "type": "address"
+        },
+        {
+          "name": "_beginBlock",
+          "type": "uint256"
+        },
+        {
+          "name": "_endBlock",
+          "type": "uint256"
+        },
+        {
+          "name": "_weiPerBtc",
+          "type": "uint256"
+        },
+        {
+          "name": "_defaultEtmPerBtc",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "returnAddr",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "weiAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "currentRate",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "etmAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "etmPerBTCRate",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "weiPerBTCRate",
+          "type": "uint256"
+        }
+      ],
+      "name": "Received",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "Halted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "Unhalted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "newRate",
+          "type": "uint256"
+        }
+      ],
+      "name": "RateChanged",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040526006805460ff1916905560006009819055600a819055600b55341561002857600080fd5b60405160c080610a928339810160405280805191906020018051919060200180519190602001805191906020018051919060200180519150505b6000821161006f57600080fd5b6000811161007c57600080fd5b60008054600160a060020a03808916600160a060020a031992831617909255600180549288169290911691909117905560028490556003839055600482905560058190555b5050505050505b6109bb806100d76000396000f300606060405236156101015763ffffffff60e060020a600035041663083c63238114610106578063099906111461012b5780631db5c5c71461015057806322f3e2d4146101755780632334623f1461019c57806341c0e1b5146101c1578063469e9067146101d657806355b726bc146102075780635e9a1849146102315780635ed7ca5b1461025657806361d027b31461027d5780636d98e9fc146102ac5780638dfb8769146102d1578063a6903278146102fd578063b32b56f914610322578063c7ff15841461034a578063cb3e64fd14610371578063d2b1998e14610398578063ea6b57d6146103c5578063f851a440146103ef578063fad9aba31461041e575b600080fd5b341561011157600080fd5b610119610443565b60405190815260200160405180910390f35b341561013657600080fd5b610119610449565b60405190815260200160405180910390f35b341561015b57600080fd5b61011961044f565b60405190815260200160405180910390f35b341561018057600080fd5b610188610455565b604051901515815260200160405180910390f35b34156101a757600080fd5b61011961047f565b60405190815260200160405180910390f35b34156101cc57600080fd5b6101d4610485565b005b34156101e157600080fd5b610119600160a060020a03600435166104c1565b60405190815260200160405180910390f35b341561021257600080fd5b6101886004356104d3565b604051901515815260200160405180910390f35b341561023c57600080fd5b610119610531565b60405190815260200160405180910390f35b341561026157600080fd5b610188610537565b604051901515815260200160405180910390f35b341561028857600080fd5b6102906105c1565b604051600160a060020a03909116815260200160405180910390f35b34156102b757600080fd5b6101196105d0565b60405190815260200160405180910390f35b6101d4600160a060020a0360043581169060243516600160e060020a0319604435166064356105d6565b005b341561030857600080fd5b6101196107da565b60405190815260200160405180910390f35b341561032d57600080fd5b6101196004356107e0565b60405190815260200160405180910390f35b341561035557600080fd5b610188610813565b604051901515815260200160405180910390f35b341561037c57600080fd5b61018861081c565b604051901515815260200160405180910390f35b34156103a357600080fd5b6101886004356024356108a2565b604051901515815260200160405180910390f35b34156103d057600080fd5b6101886004356108da565b604051901515815260200160405180910390f35b34156103fa57600080fd5b61029061090f565b604051600160a060020a03909116815260200160405180910390f35b341561042957600080fd5b61011961091e565b60405190815260200160405180910390f35b60035481565b60045481565b60055481565b6000600254431015801561046a575060035443105b8015610479575060065460ff16155b90505b90565b600a5481565b60005433600160a060020a039081169116146104a057600080fd5b6003544310156104af57600080fd5b600154600160a060020a0316ff5b5b5b565b60076020526000908152604090205481565b6000805433600160a060020a039081169116146104ef57600080fd5b60048290557f595a30f13a69b616c4d568e2a2b7875fdfe86e4300a049953c76ee278f8f3f108260405190815260200160405180910390a15060015b5b919050565b600b5481565b6000805433600160a060020a0390811691161461055357600080fd5b60025443101580610573575060035443108015610573575060065460ff16155b5b151561057f57600080fd5b6006805460ff191660011790557f1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f360405160405180910390a15060015b5b5b90565b600154600160a060020a031681565b60095481565b600080600080600254431015806105fc5750600354431080156105fc575060065460ff16155b5b151561060857600080fd5b67027f7d0bdb92000034101561061d57600080fd5b600160e060020a03198616600160a060020a0389811690891618604051908152602001604051908190039020600160e060020a0319161461065d57600080fd5b600154349450600160a060020a031684156108fc0285604051600060405180830381858888f19350505050151561069357600080fd5b61069c856107e0565b92506106b36004548461092a90919063ffffffff16565b91506106c5848363ffffffff61095916565b600160a060020a0389166000908152600760205260409020549091506106f1908263ffffffff61097516565b600160a060020a03891660009081526007602052604090205560095461071d908563ffffffff61097516565b600955600a54610733908263ffffffff61097516565b600a55600b5461074a90600163ffffffff61097516565b600b8190555087600160a060020a03167f3a2f535b47570626de29e0edc6f0598759165ac01e5707fc48306e7c4bae282488868585886004546040518087600160a060020a0316600160a060020a03168152602001868152602001858152602001848152602001838152602001828152602001965050505050505060405180910390a25b5b5b5050505050505050565b60025481565b60008181526008602052604081205415610809575060008181526008602052604090205461052b565b506005545b919050565b60065460ff1681565b6000805433600160a060020a0390811691161461083857600080fd5b60025443101580610857575060035443108015610857575060065460ff165b5b151561086357600080fd5b6006805460ff191690557f7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca60405160405180910390a15060015b5b5b90565b6000805433600160a060020a039081169116146108be57600080fd5b50600082815260086020526040902081905560015b5b92915050565b6000805433600160a060020a039081169116146108f657600080fd5b5060008181526008602052604081205560015b5b919050565b600054600160a060020a031681565b67027f7d0bdb92000081565b6000828202831580610946575082848281151561094357fe5b04145b151561094e57fe5b8091505b5092915050565b600080828481151561096757fe5b0490508091505b5092915050565b60008282018381101561094e57fe5b8091505b50929150505600a165627a7a72305820a1393c738c8a7e67cba3424a8a34eb4093ef4fea43300b81e2fff2123e4ea3bf0029",
+  "networks": {
+    "9498256": {
+      "events": {
+        "0x14432f6e1dc0e8c1f4c0d81c69cecc80c0bea817a74482492b0211392478ab9b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x5e3b21627de17bf6193e1957e6bb3ca098f73c47",
+      "updated_at": 1503923120162
+    },
+    "1501239376346": {
+      "events": {
+        "0x14432f6e1dc0e8c1f4c0d81c69cecc80c0bea817a74482492b0211392478ab9b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xe27def168c163c383edb0dcfd8271f5c42b562c1",
+      "updated_at": 1501239395556
+    },
+    "1501240343989": {
+      "events": {
+        "0x14432f6e1dc0e8c1f4c0d81c69cecc80c0bea817a74482492b0211392478ab9b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x9a090f32f3208bcd31419225b2e2d2c5ccb3ff00",
+      "updated_at": 1501240362478
+    },
+    "1501240547902": {
+      "events": {
+        "0x14432f6e1dc0e8c1f4c0d81c69cecc80c0bea817a74482492b0211392478ab9b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x82bacd4e0d3bbfa6358f8891c001840f79f5229e",
+      "updated_at": 1501240555988
+    },
+    "1501242373831": {
+      "events": {
+        "0x14432f6e1dc0e8c1f4c0d81c69cecc80c0bea817a74482492b0211392478ab9b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x94b7e0a00cc35622d22497757c285c6f82309a92",
+      "updated_at": 1501242423017
+    },
+    "1501243752785": {
+      "events": {
+        "0x14432f6e1dc0e8c1f4c0d81c69cecc80c0bea817a74482492b0211392478ab9b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xcdcc8c1f8d42bce2b995e8cc2c48dbfd26c3d6c6",
+      "updated_at": 1501243783186
+    },
+    "1501243950479": {
+      "events": {
+        "0x14432f6e1dc0e8c1f4c0d81c69cecc80c0bea817a74482492b0211392478ab9b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xa6fcea8a718525de4b2aadd28f8b72ed469cd13f",
+      "updated_at": 1501244006851
+    },
+    "1503923391875": {
+      "events": {
+        "0x14432f6e1dc0e8c1f4c0d81c69cecc80c0bea817a74482492b0211392478ab9b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xf740fd68ef70b9ee52c619fc655f6b52731cc1f0",
+      "updated_at": 1503923427673
+    },
+    "1503924113357": {
+      "events": {
+        "0x14432f6e1dc0e8c1f4c0d81c69cecc80c0bea817a74482492b0211392478ab9b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x33fe3e4fbef0eb163ccd374f3569ccd04390566f",
+      "updated_at": 1503924415540
+    },
+    "1504001879653": {
+      "events": {
+        "0xc28a8225e0206cf9fce9811e3f25c6e816d77efef14f1729062334df2c3ad4f1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmPerBTC",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x76471b95fca47d4f8883de4a0696f91514ca4790",
+      "updated_at": 1504001898274
+    },
+    "1504002922550": {
+      "events": {
+        "0xc28a8225e0206cf9fce9811e3f25c6e816d77efef14f1729062334df2c3ad4f1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmPerBTC",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x17f6b8387a39e9134f1d2eb8c0a037e9843caf82",
+      "updated_at": 1504002932934
+    },
+    "1504010959588": {
+      "events": {
+        "0x3a2f535b47570626de29e0edc6f0598759165ac01e5707fc48306e7c4bae2824": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "ETM",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmPerBTC",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "weiPerBtc",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xa34a9bc19528789d6fc36cf6866f2ce7b04dfac6",
+      "updated_at": 1504010991179
+    },
+    "1504094479330": {
+      "events": {
+        "0x3a2f535b47570626de29e0edc6f0598759165ac01e5707fc48306e7c4bae2824": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "weiAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmPerBTCRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "weiPerBTCRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        },
+        "0x595a30f13a69b616c4d568e2a2b7875fdfe86e4300a049953c76ee278f8f3f10": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "newRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "RateChanged",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x0369a5cbfd2c809281f42cc03253ca8b4e37ba05",
+      "updated_at": 1504094513687
+    },
+    "1504094858744": {
+      "events": {
+        "0x3a2f535b47570626de29e0edc6f0598759165ac01e5707fc48306e7c4bae2824": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "weiAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmPerBTCRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "weiPerBTCRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        },
+        "0x595a30f13a69b616c4d568e2a2b7875fdfe86e4300a049953c76ee278f8f3f10": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "newRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "RateChanged",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x9317638e2a2e27d151439020481e4d5aedc65007",
+      "updated_at": 1504094984932
+    },
+    "1504179014331": {
+      "events": {
+        "0x3a2f535b47570626de29e0edc6f0598759165ac01e5707fc48306e7c4bae2824": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "weiAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmPerBTCRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "weiPerBTCRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        },
+        "0x595a30f13a69b616c4d568e2a2b7875fdfe86e4300a049953c76ee278f8f3f10": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "newRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "RateChanged",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x7a2459f65079f9c7cea4d0ec7c9f532502db7028",
+      "updated_at": 1504179047688
+    },
+    "1504194056140": {
+      "events": {
+        "0x3a2f535b47570626de29e0edc6f0598759165ac01e5707fc48306e7c4bae2824": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "weiAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmPerBTCRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "weiPerBTCRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        },
+        "0x595a30f13a69b616c4d568e2a2b7875fdfe86e4300a049953c76ee278f8f3f10": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "newRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "RateChanged",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x21a16a73ae6364152f5d9cdf3f7f147469eb9f73",
+      "updated_at": 1504194098599
+    },
+    "1504253146536": {
+      "events": {
+        "0x3a2f535b47570626de29e0edc6f0598759165ac01e5707fc48306e7c4bae2824": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "weiAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmPerBTCRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "weiPerBTCRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        },
+        "0x595a30f13a69b616c4d568e2a2b7875fdfe86e4300a049953c76ee278f8f3f10": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "newRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "RateChanged",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xf2daa3580d4171d6e59e5c57a92df8459d3b7918",
+      "updated_at": 1504253341562
+    },
+    "1504253895810": {
+      "events": {
+        "0x3a2f535b47570626de29e0edc6f0598759165ac01e5707fc48306e7c4bae2824": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "weiAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmPerBTCRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "weiPerBTCRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        },
+        "0x595a30f13a69b616c4d568e2a2b7875fdfe86e4300a049953c76ee278f8f3f10": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "newRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "RateChanged",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xde5d9ec8ddf5fa4f50ad4acdfc01d38801c79237",
+      "updated_at": 1504254040957
+    },
+    "1504514280286": {
+      "events": {
+        "0x3a2f535b47570626de29e0edc6f0598759165ac01e5707fc48306e7c4bae2824": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "weiAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmPerBTCRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "weiPerBTCRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        },
+        "0x595a30f13a69b616c4d568e2a2b7875fdfe86e4300a049953c76ee278f8f3f10": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "newRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "RateChanged",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x8f1e882007694debe09c5e0c5bd06c1c5912b8c4",
+      "updated_at": 1504514328126
+    },
+    "1504599054004": {
+      "events": {
+        "0x3a2f535b47570626de29e0edc6f0598759165ac01e5707fc48306e7c4bae2824": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "weiAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "etmPerBTCRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "weiPerBTCRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        },
+        "0x595a30f13a69b616c4d568e2a2b7875fdfe86e4300a049953c76ee278f8f3f10": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "newRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "RateChanged",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x68b3aed25ae1b9c7576882300b04a03cdd42987c",
+      "updated_at": 1504599113199
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1504599113199
+}

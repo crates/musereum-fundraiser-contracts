@@ -1,0 +1,41 @@
+{
+  "name": "musereum-fundraiser-contracts",
+  "version": "0.0.1",
+  "description": "Tools for the Musereum Fundraiser",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard test/*.js && nyc tape test/*.js | faucet && nyc report"
+  },
+  "keywords": [
+    "musereum",
+    "blockchain",
+    "etm"
+  ],
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "bip39": "^2.3.0",
+    "bitcoinjs-lib": "^2.3.0",
+    "bitwise-xor": "0.0.0",
+    "browser-request": "^0.3.3",
+    "bs58check": "^2.0.1",
+    "create-hash": "^1.1.2",
+    "keccak": "^1.2.0",
+    "left-pad": "^1.1.3",
+    "request": "^2.79.0",
+    "secp256k1": "^3.2.5",
+    "web3": "^0.18.4",
+    "zeppelin-solidity": "^1.2.0"
+  },
+  "browser": {
+    "request": "browser-request"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "faucet": "^0.0.1",
+    "nyc": "^10.1.2",
+    "standard": "^9.0.2",
+    "tape": "^4.6.3"
+  }
+}

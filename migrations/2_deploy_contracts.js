@@ -1,27 +1,28 @@
-var accounts = web3.eth.accounts;
-console.log("ACCOUNTS", accounts);
-
 var SafeMath = artifacts.require('./SafeMath.sol');
 var Fundraiser = artifacts.require("./Fundraiser.sol");
 
-var periodBlocks = 400000;
-var beginBlockIn = 0;
-
-var blockNum = web3.eth.blockNumber;
-var admin = '0x00a329c0648769A73afAc7F9381E08FB43dBEA72'; /*'0xf982f6ac73a26e243b7d26e0388b104817f75933';*/ //accounts[0];
-var treasury = '0xf982f6ac73a26e243b7d26e0388b104817f75933'; /*'0x00f4B0B2dAA304636eB4965053EFC04FBc6429F8';*/ //accounts[1];
-var beginBlock = blockNum + beginBlockIn;
-var endBlock = beginBlock + periodBlocks;
-var btcPerWei = web3.toWei(1/0.08145613, "ether");
-var defaultEtmPerBTC = 5000;
-
-web3.personal.unlockAccount("0x00a329c0648769A73afAc7F9381E08FB43dBEA72", "1", 15000);
-
 module.exports = function(deployer) {
-  console.log("Height before deployment", blockNum);
-  console.log({ admin, treasury, monitor, beginBlock, endBlock, btcPerWei, defaultEtmPerBTC });
+  var beginBlockIn = 0;
+  var periodBlocks = 209000;
 
-  deployer.deploy(SafeMath);
-  deployer.link(SafeMath, Fundraiser);
-  deployer.deploy(Fundraiser, admin, treasury, beginBlock, endBlock, btcPerWei, defaultEtmPerBTC);
+  web3.eth.getBlockNumber(async (err, blockNumber) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+
+    var admin = '0x71f1BaFD46a8A14978a79A9161c07259A9308B22';
+    var treasury = '0xcC1fF90e4eC2c004f51Bbefe4eC555A513B9A691';
+    var beginBlock = blockNumber + beginBlockIn;
+    var endBlock = beginBlock + periodBlocks;
+    var btcPerWei = 1/0.08145613 * 1e18;
+    var defaultEtmPerBTC = 5000;
+
+    console.log("Height before deployment", blockNumber);
+    console.log({ admin, treasury, beginBlock, endBlock, btcPerWei, defaultEtmPerBTC });
+
+    await deployer.deploy(SafeMath);
+    await deployer.link(SafeMath, Fundraiser);
+    await deployer.deploy(Fundraiser, admin, treasury, beginBlock, endBlock, btcPerWei, defaultEtmPerBTC);
+  });
 };

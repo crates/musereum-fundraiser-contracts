@@ -1,12 +1,11 @@
 //! Fundraiser contract. Just records who sent what.
 //! By Parity Technologies, 2017.
 //! Released under the Apache Licence 2.
-//! Modified by the Interchain Foundation.
+//! Modified by the Musereum.
 
 pragma solidity ^0.4.11;
 
-//import "zeppelin-solidity/contracts/math/SafeMath.sol";
-import "./SafeMath.sol";
+import "zeppelin-solidity/contracts/math/SafeMath.sol";
 
 /// Will accept Ether "contributions" and records each both as a log and in a
 /// queryable records.

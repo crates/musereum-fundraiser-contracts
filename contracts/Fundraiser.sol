@@ -13,7 +13,7 @@ contract Fundraiser {
     using SafeMath for uint;
 
     // How much is enough?
-    uint public constant dust = 180 finney;
+    uint public constant dust = 100 finney;
 
     // Special addresses:
     //  administrator can halt/unhalt/kill/adjustRate;
@@ -22,8 +22,8 @@ contract Fundraiser {
     address public treasury;
 
     // Begin and end block for the fundraising period
-    uint public beginBlock;
-    uint public endBlock;
+    //uint public beginBlock;
+    //uint public endBlock;
 
     // Number of wei per btc
     uint public weiPerBtc;
@@ -51,8 +51,8 @@ contract Fundraiser {
     function Fundraiser(
         address _admin,
         address _treasury,
-        uint _beginBlock,
-        uint _endBlock,
+        //uint _beginBlock,
+        //uint _endBlock,
         uint _weiPerBtc,
         uint _EtmPerBtc
     ) {
@@ -61,8 +61,8 @@ contract Fundraiser {
 
         admin = _admin;
         treasury = _treasury;
-        beginBlock = _beginBlock;
-        endBlock = _endBlock;
+        //beginBlock = _beginBlock;
+        //endBlock = _endBlock;
 
         weiPerBtc = _weiPerBtc;
         EtmPerBtc = _EtmPerBtc;
@@ -73,11 +73,11 @@ contract Fundraiser {
     // Can only be called by prior to the period.
     //modifier only_before_period { require(block.number < beginBlock); _; }
     // Can only be called during the period when not halted.
-    modifier only_during_period { require(block.number >= beginBlock || block.number < endBlock && !isHalted); _; }
+    modifier only_during_period { require(/*block.number >= beginBlock || block.number < endBlock && */!isHalted); _; }
     // Can only be called during the period when halted.
-    modifier only_during_halted_period { require(block.number >= beginBlock || block.number < endBlock && isHalted); _; }
+    modifier only_during_halted_period { require(/*block.number >= beginBlock || block.number < endBlock && */isHalted); _; }
     // Can only be called after the period.
-    modifier only_after_period { require(block.number >= endBlock); _; }
+    //modifier only_after_period { require(block.number >= endBlock); _; }
     // The value of the message must be sufficiently large to not be considered dust.
     modifier is_not_dust { require(msg.value >= dust); _; }
 
@@ -91,7 +91,7 @@ contract Fundraiser {
 
     // Is the fundraiser active?
     function isActive() public constant returns (bool active) {
-        return (block.number >= beginBlock && block.number < endBlock && !isHalted);
+        return (/*block.number >= beginBlock && block.number < endBlock && */ !isHalted);
     }
 
     /// Receive a contribution for a donor musereum address.
@@ -136,7 +136,7 @@ contract Fundraiser {
     }
 
     /// Kill this contract.
-    function kill() public only_admin only_after_period {
+    function kill() public only_admin /*only_after_period*/ {
         suicide(treasury);
     }
 }

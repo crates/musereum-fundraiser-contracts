@@ -83,7 +83,7 @@ module.exports = {
       network_id: 1,    // Official network id
       provider: engineMain, // Use our custom provider
       from: addressMain,    // Use the address we derived
-      gas: 4712388,
+      gas: 4000000,
       gasPrice: web3.toWei(20, 'gwei'),
     },
     "classic": {

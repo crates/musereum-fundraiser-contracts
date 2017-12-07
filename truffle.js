@@ -11,7 +11,6 @@ var Web3 = require("web3");
 
 var web3 = new Web3();
 
-/*
 //
 // Ropsten
 //
@@ -35,8 +34,6 @@ engine.on('error', function(err) {
     console.error(err.stack)
 })
 engine.start(); // Required by the provider engine.
-*/
-
 
 //
 // Ethereum
@@ -75,25 +72,25 @@ console.log('addressClassic: ', addressClassic);
 
 module.exports = {
   networks: {
-    // "ropsten": {
-    //   network_id: 3,    // Official ropsten network id
-    //   provider: engine, // Use our custom provider
-    //   from: address,    // Use the address we derived
-    //   //gas: 4712388,
-    //   gasPrice: 250000000000,
-    // },
+    "ropsten": {
+      network_id: 3,    // Official ropsten network id
+      provider: engine, // Use our custom provider
+      from: address,    // Use the address we derived
+      gas: 4500000,
+      gasPrice: web3.toWei(20, 'gwei'),
+    },
     "main": {
       network_id: 1,    // Official network id
       provider: engineMain, // Use our custom provider
       from: addressMain,    // Use the address we derived
-      //gas: 4712388,
-      gasPrice: web3.toWei(1, 'gwei'),
+      gas: 4712388,
+      gasPrice: web3.toWei(20, 'gwei'),
     },
     "classic": {
       network_id: 61,    // Official network id
       provider: engineClassic, // Use our custom provider
       from: addressClassic,    // Use the address we derived
-      gas: 4500000,
+      gas: 4300000,
       gasPrice: web3.toWei(20, 'gwei'),
     },
     "development": {

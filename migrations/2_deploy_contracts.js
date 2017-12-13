@@ -36,8 +36,8 @@ module.exports = function(deployer, network) {
     console.log("Height before deployment", blockNumber);
     console.log({ admin, treasury, /*beginBlock, endBlock,*/ btcPerWei, defaultEtmPerBTC });
 
-    await deployer.deploy(SafeMath);
-    await deployer.link(SafeMath, Fundraiser);
+    // await deployer.deploy(SafeMath);
+    // await deployer.link(SafeMath, Fundraiser);
     await deployer.deploy(Fundraiser, admin, treasury, /*beginBlock, endBlock,*/ btcPerWei, defaultEtmPerBTC);
   });
 };

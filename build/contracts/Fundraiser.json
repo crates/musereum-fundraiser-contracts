@@ -339,8 +339,65 @@
         }
       },
       "updated_at": 1512649978597
+    },
+    "3": {
+      "links": {},
+      "events": {
+        "0x14432f6e1dc0e8c1f4c0d81c69cecc80c0bea817a74482492b0211392478ab9b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "returnAddr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "weiAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "currentRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "Received",
+          "type": "event"
+        },
+        "0x1ee9080f6b55ca44ce58681c8162e6c1ac1c47e1da791a4a1c1ec6186d8af1f3": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Halted",
+          "type": "event"
+        },
+        "0x7c46a5e7a10434913e987d799d659758880ce8e790692e13e66ddfae4cc9afca": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "Unhalted",
+          "type": "event"
+        },
+        "0x595a30f13a69b616c4d568e2a2b7875fdfe86e4300a049953c76ee278f8f3f10": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "newRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "RateChanged",
+          "type": "event"
+        }
+      },
+      "updated_at": 1513016397653
     }
   },
   "schema_version": "0.0.5",
-  "updated_at": 1512649978597
+  "updated_at": 1513016397653
 }

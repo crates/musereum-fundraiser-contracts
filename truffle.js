@@ -67,6 +67,7 @@ engineClassic.addProvider(new WalletSubprovider(walletClassic, {}));
 engineClassic.addProvider(new Web3Subprovider(new Web3.providers.HttpProvider(providerUrlClassic)));
 engineClassic.start(); // Required by the provider engine.
 
+console.log('addressRopsten: ', address);
 console.log('addressMain: ', addressMain);
 console.log('addressClassic: ', addressClassic);
 

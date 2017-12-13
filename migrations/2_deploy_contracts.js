@@ -16,6 +16,10 @@ module.exports = function(deployer, network) {
     var treasury = '0x3c6fd5B5901dF04e844E6d0d6DA5771BC1C57509';
     var btcPerWei = 1/0.00246100 * 1e18; // change
     //var periodBlocks = 209000; // change
+  } else if (network == 'ropsten')  {
+    var admin = '0x71f1BaFD46a8A14978a79A9161c07259A9308B22';
+    var treasury = '0xcC1fF90e4eC2c004f51Bbefe4eC555A513B9A691';
+    var btcPerWei = 1/0.00246100 * 1e18; // change
   } else {
     console.log(`Doesn't found settings for current network`);
     return;

@@ -5,7 +5,7 @@
 
 pragma solidity ^0.4.11;
 
-import "zeppelin-solidity/contracts/math/SafeMath.sol";
+import "./SafeMath.sol";
 
 /// Will accept Ether "contributions" and records each both as a log and in a
 /// queryable records.
